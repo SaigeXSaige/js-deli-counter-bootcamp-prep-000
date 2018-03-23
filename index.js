@@ -1,7 +1,10 @@
 var katzDeli = [];
-function takeANumber(katzDeli , name){
-  katzDeli.push(name);
-  return (`Welcome, ${name}. You are number ${katzDeli.length} in line.`);
+var timeStamp = [];
+function takeANumber(katzDeli, i){
+  i++;
+  katzDeli.push(i);
+  timeStamp.push(Time.now());
+  return (`Welcome, ${i}. You are number ${katzDeli.length} in line.`);
 }
 function nowServing(line){
   if (line.length === 0){
@@ -23,3 +26,17 @@ function currentLine(katzDeli){
     }
 }
 
+function OneTo100(){
+  for (var i = 0; i < 100; i++){
+    if (i%3 === 0 && i%5 === 0){
+     return "FizzBuzz"
+    } else if (i%3 === 0) {
+    return "Fizz"  
+    } else if (i%5 === 0) {
+    return "Buzz"  
+    } else {
+    return i;
+    }
+  
+  }
+}
